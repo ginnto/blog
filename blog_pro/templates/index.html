@@ -272,7 +272,7 @@
                         <div class="row align-items-center">
                             <div class="col-12 col-md-6">
                                 <div class="single-blog-thumbnail">
-                                    <img src="{{i.img.url}}" alt="" style="widht:250px;height:200px;">
+                                   <a  class="imgover" href=""> <img src="{{i.img.url}}" alt="" style="widht:250px;height:200px;"></a>
                                     <div class="post-date">
                                         <a href="#">12 <span>march</span></a>
                                     </div>
@@ -283,8 +283,8 @@
                                 <div class="single-blog-content">
                                     <div class="line"></div>
                                     <a href="#" class="post-tag">{{i.cate}}</a>
-                                    <h4><a href="#" class="post-headline">{{i.name}}</a></h4>
-                                    <p>{{i.desc}}</p>
+                                    <h4><a href="{% url 'detail' i.id %}" class="post-headline">{{i.name}}</a></h4>
+                                    <p>{{i.desc|truncatewords:2}}</p>
                                     <div class="post-meta">
                                         <p>By <a href="#">{{i.autor}}</a></p>
                                         <p>3 comments</p>

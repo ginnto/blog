@@ -133,13 +133,13 @@
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="{% url 'about' %}">About Us</a></li>
-                                    <li><a href="{% url 'login' %}">Login</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
                                     {% if user.is_authenticated %}
 									<li> hai {{user.username}}</li>
 									<li><a href="accounts/logout">logout</a></li>
 									{% else %}
                                     <li><a href="{% url 'register' %}">Register</a></li>
-                                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                                    <li><a href="{% url 'login' %}">Login</a></li>
                                     {% endif %}
                                 </ul>
 
@@ -265,7 +265,6 @@
                 <div class="col-12 col-lg-9">
 
                     <!-- Single Blog Area  -->
-
                     {% for i in data %}
                     <div class="single-blog-area blog-style-2 mb-50 wow fadeInUp" data-wow-delay="0.2s"
                         data-wow-duration="1000ms">
@@ -284,7 +283,7 @@
                                     <div class="line"></div>
                                     <a href="#" class="post-tag">{{i.cate}}</a>
                                     <h4><a href="{% url 'detail' i.id %}" class="post-headline">{{i.name}}</a></h4>
-                                    <p>{{i.desc|truncatewords:2}}</p>
+                                    <p>{{i.desc}}</p>
                                     <div class="post-meta">
                                         <p>By <a href="#">{{i.autor}}</a></p>
                                         <p>3 comments</p>

@@ -31,9 +31,7 @@ def register(request):
             return redirect('register')
 
         return redirect('/')
-
     else:
-
         return render(request,'register.html')
 
 
